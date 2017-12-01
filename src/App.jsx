@@ -29,26 +29,27 @@ class App extends Component {
     return (
  		<Router>
 	        <div>
-		    		<Switch>
-		    			<Route exact path="/" component={ EvenClicks }/>
+	    		<Switch>
+	    			<Route exact path="/" component={ EvenClicks }/>
 
-				    	<Route path="/multiplier" render={ () => (
-						<Multiplier x={ 5 } y={ 7 } /> )}/>
+			    	<Route path="/multiplier" render={ () => (
+					<Multiplier x={ 5 } y={ 7 } /> )}/>
 
-				    	<Route path="/evenclicks" component={ EvenClicks }/>
+			    	<Route path="/evenclicks" component={ EvenClicks }/>
 
-				    	<Route path="/countby" render={ () => (
-				    	<CountBy step={ 5 } /> )} />
+			    	<Route path="/countby" render={ () => (
+			    	<CountBy step={ 5 } /> )} />
 
-				    	<Route path="/hideme" render={ () => (
-						<HideMe>Blah blah blah</HideMe> )}/>
+			    	<Route path="/hideme" render={ () => (
+					<HideMe>Blah blah blah</HideMe> )}/>
 
-				    	<Route path="/minimum/20" render={ () => (
-				    	<MinimumLength minimumLength={ 30 } /> )} />
+			    	<Route path="/minimum/20" render={ () => (
+			    	<MinimumLength minimumLength={ 30 } /> )} />
 
-				    	<Route component={ FourOhFour }/>
-	 				</Switch>
- 				<Links />
+			    	<Route component={ FourOhFour }/>
+ 				</Switch>
+ 				<hr />
+				<Links />
      		</div>
      	</Router>	
     );
