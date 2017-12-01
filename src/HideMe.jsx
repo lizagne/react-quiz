@@ -8,34 +8,30 @@ class HideMe extends Component {
 		super(props); //this makes Component work
 
 		this.state = { //this is an object literal
-			toggle: true, //this should always be a comma not a semi-colon 
+			isHidden: true, //this should always be a comma not a semi-colon 
 		}
 
 		this.clickShow = this.clickShow.bind(this);
 	}
 
-	clickShow ({children}) { //this is the method
-			this.setState({ toggle: !this.state.toggle });
+	clickShow () { //this is the method
+			this.setState({ isHidden: !this.state.isHidden });
 	}
 
 	render () { //this is a method
-
 		// Not working...
 		// let paragraph = ({ children }) => (
 		//         <p>
 		//             { children }
 		//             { " " }
 		//         </p>
-		// 	);
-
+		// 	)
 		return (
 			<div className="container">
  				<h1>Hide Me Challenge</h1>
 				<p className="lead">Create a component HideMe Blah blah blah that uses children to accept some content. When the component is clicked the content should be hidden. </p>
-				<p> { this.state.display } </p>
-				<p>
-		            Blah blah blah
-		        </p>
+				<p> {this.state.isHidden ? "blah blah blah" : ""} </p>
+				
 				<button
 					className= "btn-primary"
 					onClick={ this.clickShow }>
@@ -48,6 +44,7 @@ class HideMe extends Component {
 };
 
 export default HideMe;
+
 
 
 
