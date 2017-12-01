@@ -26,15 +26,19 @@ class MinimumLength extends Component { //class which uses components
                 <p className="lead"> Create a component MinimumLength length= 30  that contains an input. The user should see a warning, "Too short!", unless they have entered at least length characters.</p>
                 <h3>Password</h3>
             	<input 
+                    placeholder="Type password here"
                     type="password"
-                    onChange={(evt) => this.setState({length: evt.target.value.length})}//callback function
-                    onKeyPress={(evt) => this.hasMinimumLength(this.props.minimumLength) ? <p>Too Short!</p> : <p>This is a great password, Mark will be proud</p> }>
-   
+                    onChange={(e) => this.setState({length: e.target.value.minLength})} //callback function
+                    minLength={ 30 }>
             	</input>
-{/*	        	<MinimumLength label="Password" minimumLength={this.props.minimumLength} />
-*/}            </div>
+                <hr />
+                <p>{ this.props.minimumLength ? "Too Short!" : "Good password, Mark would approve"} </p>
+            </div>
         );
     } 
 }
 
 export default MinimumLength;
+
+
+                    // { this.props.minimumLength ? <p>Too Short!</p> : <p>This is a great password, Mark will be proud</p> }
