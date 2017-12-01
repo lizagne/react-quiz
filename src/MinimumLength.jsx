@@ -10,13 +10,15 @@ class MinimumLength extends Component { //class which uses components
         super(props);
 
         this.state = {
-            length: 0
+            value: "",
         }
+
+        // this.hasMinimumLength = this.hasMinimumLength.bind(this); //I don't think this is needed, but I don't know why //this isn't needed because of the callback function at the bottom.
     }
 
-    hasMinimumLength(minLength) {
-        return this.state.length >= minLength
-    }
+    // hasMinimumLength(minLength) {
+    //     return this.state.length >= minLength
+    // }
 
     render() { //everything you pass to a component is a prop...these props in green have functions inside of them
 
@@ -28,11 +30,13 @@ class MinimumLength extends Component { //class which uses components
             	<input 
                     placeholder="Type password here"
                     type="password"
-                    onChange={(e) => this.setState({length: e.target.value.minLength})} //callback function
-                    minLength={ 30 }>
-            	</input>
+                    onChange={(e) => this.setState({value: e.target.value})} //callback function, this needs to be pulled out to a method above.
+                    minLength={ 30 }
+                    value={this.state.value} 
+                />
+            	
                 <hr />
-                <p>{ this.props.minimumLength ? "Too Short!" : "Good password, Mark would approve"} </p>
+                <p>{ this.props.minimumLength >= this.state.value.length ? "Too Short!" : "Good password, Mark would approve"} </p>
             </div>
         );
     } 

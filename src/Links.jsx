@@ -30,6 +30,10 @@ export default ({ children }) => (
             <li><Link to="/minimum">
                 Minimum 
             </Link></li>
+
+            <li><Link to="/posts">
+                Posts 
+            </Link></li>
         </ul>
     </div>
 );

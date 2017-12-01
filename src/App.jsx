@@ -14,6 +14,7 @@ import CountBy from "./CountBy"
 import HideMe from "./HideMe"
 import MinimumLength from "./MinimumLength"
 import Links from "./Links"
+import Posts from "./Posts"
 import FourOhFour from "./FourOhFour"
 
 import {
@@ -49,6 +50,8 @@ class App extends Component {
 
 			    	<Route path="/show/:minimumLength" render={ ({ match }) => (
     				<MinimumLength minimumLength={ match.params.minimumLength } />)} />
+
+    				<Route path="/posts" component={ Posts }/>
 
 			    	<Route component={ FourOhFour }/>
  				</Switch>
