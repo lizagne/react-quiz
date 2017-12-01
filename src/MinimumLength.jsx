@@ -23,8 +23,8 @@ class MinimumLength extends Component { //class which uses components
         return (
         	<div className="container">
                 <h1>Minimum Length Challenge</h1>
-                <p> Create a component MinimumLength length= 30  that contains an input. The user should see a warning, "Too short!", unless they have entered at least length characters.</p>
-                <h3>{this.props.label}</h3>
+                <p className="lead"> Create a component MinimumLength length= 30  that contains an input. The user should see a warning, "Too short!", unless they have entered at least length characters.</p>
+                <h3>Password</h3>
             	<input 
                     type="password"
                     onChange={(evt) => this.setState({length: evt.target.value.length})}//callback function

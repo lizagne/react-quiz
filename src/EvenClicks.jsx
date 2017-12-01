@@ -6,9 +6,9 @@ import React, { Component } from 'react';
 class EvenClicks extends Component { 
 	constructor(props) { 
 
-		super(props);	
+		super(props); //has to be here for the this.state etc to work	
 
-		this.onClick = this.onClick.bind(this);
+		this.onClick = this.onClick.bind(this); //binding the onClick method because of the context
  
 		this.state = { //this is a object literal
 	        clicked : false,
@@ -16,7 +16,7 @@ class EvenClicks extends Component {
 	}
 
 	onClick () { //this is the method
-		this.setState({ clicked : !this.state.clicked }); //value
+		this.setState({ clicked : !this.state.clicked }); //set the state to the opposite of it's original state
 	}
 
 	render () { //this is a method
@@ -28,7 +28,7 @@ class EvenClicks extends Component {
 				<button 
 					className="btn-primary"
 	 				onClick={ this.onClick }>
-					{ this.state.clicked%2===0 ? "Even" : "Odd" } {/*this is the state*/}
+					{ this.state.clicked%2===0 ? "Even" : "Odd" } {/*using a ternary to give an even or odd alert*/}
 
 				</button>	
 			</div>

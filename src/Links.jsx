@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 
 export default ({ children }) => (
-    <div className="navbar-header">
+    <div className="container">
         <ul>
             <li><Link to="/">
                 Home
