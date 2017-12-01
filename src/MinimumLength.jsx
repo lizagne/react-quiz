@@ -21,7 +21,9 @@ class MinimumLength extends Component { //class which uses components
     render() { //everything you pass to a component is a prop...these props in green have functions inside of them
 
         return (
-        	<div>
+        	<div className="container">
+                <h1>Minimum Length Challenge</h1>
+                <p> Create a component MinimumLength length= 30  that contains an input. The user should see a warning, "Too short!", unless they have entered at least length characters.</p>
                 <h3>{this.props.label}</h3>
             	<input 
                     type="password"

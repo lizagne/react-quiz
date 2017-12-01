@@ -23,7 +23,7 @@ class CountBy extends Component {
 
 	render () { //this is a method
 		return (
-			<div>
+			<div className="container">
 				<h1> Count By Challenge </h1>
 				<p className="lead">Create a component CountBy step= 5  that takes a step prop. It should display a number (starting at 0) inside a p tag. Every time it is clicked the number should go up by step.</p>
 
