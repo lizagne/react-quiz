@@ -6,6 +6,7 @@ import React, { Component } from 'react';
 import Multiplier from "./Multiplier"
 import EvenClicks from "./EvenClicks"
 import CountBy from "./CountBy"
+import HideMe from "./HideMe"
 
 class App extends Component {
   render() {
@@ -18,6 +19,7 @@ class App extends Component {
 	    	<hr />
 	    	<CountBy step={ 5 } />
 	    	<hr />
+	    	<HideMe>Blah blah blah</HideMe> 
     	</div>
      
     );
